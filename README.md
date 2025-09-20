@@ -29,6 +29,6 @@ This repo is mainly for **practice & revision**. It’s not focused on productio
 
 ## 📅 Projects
 
-| S.no | Projects         | Live Link |  Readme file |
-|-----|----------------|--------|
-| 1   | Shopping Cart       | [Shopping Cart](ShoppingCart/index.html) | | [Readme file](ShoppingCart/Readme.md) |
+| S.no | Project        | Live Link                                  | Readme File                          |
+|------|----------------|--------------------------------------------|---------------------------------------|
+| 1    | Shopping Cart  | [Shopping Cart](ShoppingCart/index.html)   | [Readme](ShoppingCart/Readme.md)     |
