@@ -77,3 +77,18 @@ This function will be responsible for clearing the `cart` array and will call sa
 # Next Things to implement
 - [x] Save data to localStorage
 - [ ] Add remove button
+
+# Refactoring Code
+After Watching the video we need to Refactor the code Things that need to change:
+- Instead static Product list we will make it Dynamically
+
+First we will render the all product form the product array while redering all the product and when we will create button make sure to add `data-id` attribute where product id should be store so later on we can work on it
+
+Now we will put click eventListener to prductList and put condition of `e.target.tagName = 'BUTTON'` and will write our logic to that specific condition so rest of the element can be ignored.
+
+Now in that specific condtion we will extract that specific id's product by `e.traget.getAttribute` where we will get the specific product id. that we just clicked and then using `find` method we will extract the whole obj
+
+Now  we have that specific obj that we clicked we will store it in cart array and will perform following function:
+- saveCartItem()
+- addToCart()
+- calculateTotalPrice()

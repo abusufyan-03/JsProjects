@@ -98,6 +98,10 @@ ul {
     border-bottom: 1px solid gainsboro;
 }
 
+.cart-item:last-child {
+  margin-bottom: 16px;
+}
+
 #carts-total {
     display: flex;
     flex-direction: column;
