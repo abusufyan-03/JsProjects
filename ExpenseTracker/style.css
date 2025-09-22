@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #2563eb;
+  /* primary color */
+  --bg: #f3f4f6;
+  /* light gray background */
+  --card: #ffffff;
+  /* white card */
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.card {
+  width: 420px;
+  background-color: var(--card);
+  Border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+input[type="text"] {
+  height: 44px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background-color: #fff;
+  color: #0F172A;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border: 1px solid var(--primary);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.15);
+}
+
+.form {
+  display: grid;
+  gap: 12px;
+}
+
+#sub-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  margin-top: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#sub-btn:hover {
+  background-color: #0640bd;
+}
+
+.sub-btn:active {
+  transform: translateY(1px);
+}
+
+.bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-2 {
+    margin: 16px 0;
+    font-size: 36px;
+}
+
+.expense-items {
+    list-style: none;
+    margin-top: 16px;
+    border-radius: 5px;
+    
+}
+
+.expense-item {
+    background-color: #e7e5e4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 10px;
+}
+
+.expense-item button {
+    background-color: red;
+    border: none;
+    padding: 8px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+
+#total-expense {
+    margin-top: 8px;
+}
+
+
+

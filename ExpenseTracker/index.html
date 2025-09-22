@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main>
+        <section class="card">
+            <h1 class="title">Expense Tracker</h1>
+            <form class="form">
+                <input type="text" id="expense-name" required placeholder="Expense Name">
+                <input type="text" id="amount" required placeholder="amount">
+                <button id="sub-btn">Add Expense</button>
+            </form>
+                <h2 class="title-2">Expenses</h2>
+
+                <ul class="expense-items">
+                    <!-- <li class="expense-item">
+                        <span>Movie - $5.00</span>
+                        <button>delete</button>
+                    </li> -->
+                </ul>
+                <h3 id="total-expense"><span>Total: </span><span id="total">$0.00</span></h3>
+        </section>
+    </main>
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
