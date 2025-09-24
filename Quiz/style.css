@@ -1,0 +1,113 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --primary: #2563eb;
+  /* primary color */
+  --bg: #f3f4f6;
+  /* light gray background */
+  --card: #ffffff;
+  /* white card */
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg);
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 16px;
+}
+
+.card {
+  width: 420px;
+  background-color: var(--card);
+  Border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08), 0 8px 24px rgba(15, 23, 42, 0.08);
+  padding: 24px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 28px;
+}
+
+.btn {
+  /* width: 100%; */
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  font-size: 16px;
+  /* margin-top: 16px; */
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #0640bd;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.hidden {
+    display: none;
+}
+
+.quiz-options {
+    list-style: none;
+    margin-top: 8px;
+    border-radius: 5px;
+    width: 100%;
+    
+}
+
+.quiz-option {
+    background-color: #e7e5e4;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: 12px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.quiz-option:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+.your-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .score {
+    text-align: center;
+} */
