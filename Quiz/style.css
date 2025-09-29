@@ -78,12 +78,18 @@ main {
     display: none;
 }
 
+.quiz-container {
+  display: flex;
+  flex-direction: column;  /* Stack items vertically */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
 .quiz-options {
     list-style: none;
     margin-top: 8px;
-    border-radius: 5px;
-    width: 100%;
-    
+    border-radius: 5px;    
 }
 
 .quiz-option {
@@ -97,10 +103,20 @@ main {
     cursor: pointer;
 }
 
+.quiz-option:last-child {
+  margin-bottom: 16px;
+}
+
 .quiz-option:hover {
     background-color: var(--primary);
     color: white;
 }
+
+#next-quiz-btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 
 .your-score {
     display: flex;
