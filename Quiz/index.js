@@ -18,6 +18,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const quizContainer = document.querySelector('.quiz-container');
     const quizQuestion = document.querySelector('.quiz-question');
     const quizOptions = document.querySelector('.quiz-options');
+    const quizOption = document.querySelector('.quiz-option');
     const resultContainer = document.querySelector('.result-container');
     const score = document.querySelector('.score')
 
@@ -129,12 +130,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function selectOption(choice) {
         let correctAnswer = questions[currentQuizeIndex].answer;
-        nextQuizBtn.style.display = 'block';
+        // nextQuizBtn.style.display = 'block';
         if (correctAnswer === choice) {
             totalScore++;
+            nextQuestion();
             console.log('question Index: ', currentQuizeIndex);
             console.log('total score:', totalScore);
         } else {
+            nextQuestion();
             console.log("total score:", totalScore);
             console.log('question Index: ', currentQuizeIndex);
         }
