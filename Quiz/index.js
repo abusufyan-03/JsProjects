@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function showQuestion() {
+        nextQuizBtn.style.display = 'none';
         let currentQuestion = questions[currentQuizeIndex];
         quizQuestion.innerHTML = currentQuestion.question;
         quizOptions.innerHTML = ''; // clearing prev choice list
@@ -122,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
             li.classList.add('quiz-option');
             li.innerHTML = choice;
             quizOptions.appendChild(li);
-            li.addEventListener('click', () => selectOption(choice))
+            li.addEventListener('click', () => selectOption(choice, li))
         });
     };
 
@@ -131,18 +132,19 @@ document.addEventListener('DOMContentLoaded', function () {
         nextQuizBtn.style.display = 'block';
         if (correctAnswer === choice) {
             totalScore++;
-            currentQuizeIndex++;
-            console.log('question Index: ', currentQuizeIndex)
-            console.log('total score:', totalScore)
+            console.log('question Index: ', currentQuizeIndex);
+            console.log('total score:', totalScore);
         } else {
-            currentQuizeIndex++;
-            console.log('question Index: ', currentQuizeIndex)
+            console.log("total score:", totalScore);
+            console.log('question Index: ', currentQuizeIndex);
         }
     };
 
     function nextQuestion() {
-        if (currentQuizeIndex < questions.length) {
-            startQuiz();
+        if (currentQuizeIndex + 1 < questions.length) {
+            currentQuizeIndex++;
+            console.log('question index', currentQuizeIndex);
+            showQuestion();
         } else {
             quizContainer.style.display = 'none';
             resultContainer.style.display = 'block';
