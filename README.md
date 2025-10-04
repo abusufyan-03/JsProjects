@@ -33,4 +33,4 @@ This repo is mainly for **practice & revision**. It’s not focused on productio
 |------|----------------|--------------------------------------------|---------------------------------------|
 | 1    | Shopping Cart  | [Shopping Cart](ShoppingCart/index.html)   | [Readme](ShoppingCart/Readme.md)     |
 | 2    | Expense Tracker  | [Expense Tracker](ExpenseTracker/index.html)   | [Readme](ExpenseTracker/Readme.md)     |
-<!-- | 3    | Quiz  | [Quiz](Quiz/index.html)   | [Readme](Quiz/Readme.md)     | -->
+| 3    | Quiz  | [Quiz](Quiz/index.html)   | [Readme](Quiz/Readme.md)     |
