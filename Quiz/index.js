@@ -23,22 +23,43 @@ document.addEventListener('DOMContentLoaded', function () {
     const score = document.querySelector('.score')
 
     const questions = [
-        {
-            question: "What is the capital of france?",
-            choices: ['Paris', 'London', "Berlin", 'Madrid'],
-            answer: "Paris"
-        },
-        {
-            question: 'Which planet is known as red planet?',
-            choices: ['Mars', 'Venus', 'Jupitar', 'Saturn'],
-            answer: 'Mars'
-        },
-        {
-            question: "Who wrote 'Hamlet'?",
-            choices: ['Charles Dicken', 'Jane Austen', 'William Shakespear', 'Mark Twain'],
-            answer: 'William Shakespear'
-        }
-    ];
+    {
+        question: "Who is known as the father of computers?",
+        choices: ["Charles Babbage", "Alan Turing", "Bill Gates", "Steve Jobs"],
+        answer: "Charles Babbage"
+    },
+    {
+        question: "What does 'HTTP' stand for?",
+        choices: [
+            "HyperText Transfer Protocol",
+            "HyperText Transmission Process",
+            "HighText Transfer Program",
+            "Hyper Transfer Text Protocol"
+        ],
+        answer: "HyperText Transfer Protocol"
+    },
+    {
+        question: "Which data structure uses FIFO (First In First Out) principle?",
+        choices: ["Stack", "Queue", "Tree", "Graph"],
+        answer: "Queue"
+    },
+    {
+        question: "Which company developed the programming language 'Python'?",
+        choices: ["Microsoft", "Google", "Bell Labs", "Python Software Foundation"],
+        answer: "Python Software Foundation"
+    },
+    {
+        question: "What does ‘CPU’ stand for?",
+        choices: [
+            "Central Processing Unit",
+            "Computer Processing Unit",
+            "Central Programming Unit",
+            "Control Processing Utility"
+        ],
+        answer: "Central Processing Unit"
+    }
+];
+
 
     let currentQuizeIndex = 0;
     let totalScore = 0;
