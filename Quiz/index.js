@@ -1,17 +1,4 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // const quizContainer = document.querySelector('.quiz-container');
-    // const startQuiz = document.getElementById('start-quiz-btn');
-
-    // quizContainer.style.display = 'none';
-    // // startQuiz.classList.remove('hidden')
-
-
-    // startQuiz.addEventListener('click', function (e) {
-    //     startQuiz.classList.add('hidden');
-    //     quizContainer.style.display = 'block';
-    // })
-
-
     const startQuizBtn = document.getElementById('start-quiz-btn');
     const restartBtn = document.getElementById('restart-quiz-btn');
     const nextQuizBtn = document.getElementById('next-quiz-btn');
@@ -65,62 +52,6 @@ document.addEventListener('DOMContentLoaded', function () {
     let totalScore = 0;
 
 
-    // startQuizBtn.addEventListener('click', function (e) {
-    //     nextQuizBtn.style.display = 'none'
-    //     startQuizBtn.style.display = 'none';
-    //     quizContainer.style.display = 'inline-block';
-
-    //     startQize()
-    // });
-
-    // nextQuizBtn.addEventListener('click', function () {
-    //     if (currentQuizeIndex < questions.length) {
-    //         currentQuizeIndex++;
-    //         console.log(currentQuizeIndex)
-    //         startQize()
-
-    //     } else {
-    //         quizContainer.style.display = 'none';
-    //         score.innerHTML = `${toalScore} out of ${questions.length}`
-    //         resultContainer.style.display = 'block'
-    //         console.log(currentQuizeIndex)
-    //     }
-
-    // });
-
-    // restartBtn.addEventListener('click', function () {
-    //     resultContainer.style.display = 'none';
-    //     currentQuizeIndex = 0;
-    //     toalScore = 0;
-    //     startQuizBtn.style.display = 'block';
-    // })
-
-    // function startQize() {
-    //     let currentQuestion = questions[currentQuizeIndex];
-    //     quizQuestion.innerHTML = `${currentQuestion.question}`;
-    //     quizeOptions.innerHTML = '';
-    //     currentQuestion.choices.forEach((ch) => {
-    //         const li = document.createElement('li');
-    //         li.classList.add('quiz-option');
-    //         li.innerHTML = ch;
-    //         quizeOptions.appendChild(li);
-    //         li.addEventListener('click', () => selectOption(ch))
-
-    //     });
-
-    // };
-
-    // function selectOption(ch) {
-    //     let correctAnswer = questions[currentQuizeIndex].answer;
-    //     if (correctAnswer === ch) {
-    //         nextQuizBtn.style.display = 'block'
-    //         toalScore++;
-    //         console.log('total score:', toalScore);
-    //     } else {
-    //         nextQuizBtn.style.display = 'block'
-    //     }
-    // }
-
     // Refactorin
 
     startQuizBtn.addEventListener('click', startQuiz);
@@ -149,16 +80,17 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     };
 
-    function selectOption(choice) {
+    function selectOption(choice, li) {
         let correctAnswer = questions[currentQuizeIndex].answer;
-        // nextQuizBtn.style.display = 'block';
         if (correctAnswer === choice) {
             totalScore++;
-            nextQuestion();
+            li.classList.add('correct')
+            setTimeout(nextQuestion, 300);
             console.log('question Index: ', currentQuizeIndex);
             console.log('total score:', totalScore);
         } else {
-            nextQuestion();
+            li.classList.add('wrong')
+            setTimeout(nextQuestion, 300);
             console.log("total score:", totalScore);
             console.log('question Index: ', currentQuizeIndex);
         }
@@ -182,7 +114,5 @@ document.addEventListener('DOMContentLoaded', function () {
         nextQuizBtn.style.display = 'none';
         startQuiz();
     }
-
-
 
 });

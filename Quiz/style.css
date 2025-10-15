@@ -103,14 +103,24 @@ main {
     cursor: pointer;
 }
 
+.correct {
+  background-color: #4caf50; /* green */
+  color: white;
+}
+
+.wrong {
+  background-color: #f44336; /* red */
+  color: white;
+}
+
 .quiz-option:last-child {
   margin-bottom: 16px;
 }
 
-.quiz-option:hover {
+/* .quiz-option:hover {
     background-color: var(--primary);
     color: white;
-}
+} */
 
 #next-quiz-btn {
   margin-left: auto;
